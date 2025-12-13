@@ -1,0 +1,46 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: #000;
+    font-family: "Segoe Script", "Comic Sans MS", cursive;
+    color: #ffb347;
+}
+
+/* النص جهة اليسار */
+.left-text {
+    position: absolute;
+    top: 15%;
+    left: 5%;
+    max-width: 40%;
+}
+
+.left-text h1 {
+    font-size: 42px;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    font-size: 30px;
+}
+
+.note {
+    margin-top: 20px;
+    font-size: 25px;
+    color: #ff9f66;
+}
+
+/* الكيكة جهة اليمين */
+.cake-container {
+    position: absolute;
+    right: 10%;
+    top: 20%;
+}
+
+.cake-img {
+    width: 450px;
+    transition: 0.3s ease;
+}
+
+.cake-img.glow {
+    filter: drop-shadow(0 0 15px #ffae42);
+}

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Music Player</title>
+</head>
+<body style="margin:0; padding:0; background:transparent;">
+
+    <!-- موسيقى العيد ميلاد -->
+    <audio id="happy" src="happy.mp3" autoplay loop></audio>
+
+    <!-- صوت التصفيق -->
+    <audio id="clap" src="clap.mp3"></audio>
+
+    <script>
+        // استقبال الرسائل من index.html
+        window.addEventListener("message", (event) => {
+            if (event.data === "STOP_HAPPY_START_CLAP") {
+                const happy = document.getElementById("happy");
+                const clap  = document.getElementById("clap");
+
+                // حبسي happy
+                happy.pause();
+                happy.currentTime = 0;
+
+                // شغّل التصفيق
+                clap.currentTime = 0;
+                clap.play();
+            }
+        });
+    </script>
+
+</body>
+</html>
