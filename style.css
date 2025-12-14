@@ -44,3 +44,34 @@ body {
 .cake-img.glow {
     filter: drop-shadow(0 0 15px #ffae42);
 }
+
+.start-text {
+    margin-top: 15px;
+    font-size: 26px;
+    color: #ffb347;
+    cursor: pointer;
+    opacity: 0.85;
+    transition: 0.3s;
+}
+
+.start-text:hover {
+    opacity: 1;
+}
+
+.after-blow {
+    margin-top: 15px;
+    font-size: 24px;
+    color: #ffb347;
+    opacity: 0;
+    transition: opacity 1.2s ease;
+}
+
+/* مخفية فالأول */
+.hidden {
+    opacity: 0;
+}
+
+/* ملي تبان */
+.show {
+    opacity: 1;
+}

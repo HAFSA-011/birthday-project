@@ -1,5 +1,13 @@
 document.addEventListener("DOMContentLoaded", function () {
     const cakeImg = document.getElementById("cake-img");
+    const startAudioText = document.getElementById("start-audio");
+    const musicFrame = document.getElementById("music-frame");
+
+startAudioText.addEventListener("click", () => {
+    musicFrame.contentWindow.postMessage("START_HAPPY", "*");
+    startAudioText.style.display = "none";
+});
+
 
     let audioContext, analyser;
 
@@ -21,8 +29,15 @@ document.addEventListener("DOMContentLoaded", function () {
     cakeImg.classList.remove("glow");
 
     // صيفط message لصفحة الموسيقى
-    const musicFrame = document.getElementById("music-frame");
     musicFrame.contentWindow.postMessage("STOP_HAPPY_START_CLAP", "*");
+
+    // 🔹 إظهار الجملة بعد النفخ
+    const msg = document.getElementById("after-blow");
+    msg.classList.remove("hidden");
+
+    setTimeout(() => {
+        msg.classList.add("show");
+    }, 200);
 }
 
     // كتزاد لكليك فقط Glow باش تبان شاعلة شوية
