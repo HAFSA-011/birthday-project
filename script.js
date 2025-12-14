@@ -20,7 +20,7 @@ startAudioText.addEventListener("click", () => {
         for (let i = 0; i < bufferLength; i++) sum += dataArray[i];
 
         let average = sum / bufferLength;
-        return average > 40; // العتبة
+        return average > 90; // العتبة
     }
 
     function blowOutCandle() {
